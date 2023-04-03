@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="pfp.jpg">
+        <title>cute cats</title>
+    </head>
+    <body>
+        <div class="hero hidden">
+            <div class="hero-content">
+                <img src="pfp.jpg" alt="pfp" class="pfp" draggable="false" width="300" height="300" />
+                <h1 class="title">Leoon.</h1>
+                <p>Saving money doesn’t make money.</p>
+                <p>Making money makes money.</p>
+                <p>🎂 - aug. 24, 2004</p>
+                <p class="discord">leoon#1977</p>
+                <br>
+                <span class="member">Member</span>
+                <span class="secret">EXPERIMENTAL BIO</span>
+                <!-- Competiton Badges -->
+                <br><br>
+                <hr>
+                <span class="firebadge">#2 Hottest Bio - Jan. 2023</span>
+                <br><br>
+                <!-- END -->
+                <hr>
+                | <a href="https://discord.com/users/635444702723702794" draggable="false">discord account</a> |
+                <br><br>
+                <hr>
+                <h3 id="radio">[♪] >> song.mp3 << </h3>
+                <span class="tip">tip: click anywhere to make it rain cats!</span>
+            </div>
+        </div>
+        <div class="terminal" id="start">
+            <div class="terminal-content">
+                <p id="typingtext"></p>
+            </div>
+        </div>
+
+        <audio id="audio" src="" loop></audio>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+            // check if the device screen width and height is small, if so, allow overflow
+            if (screen.width <= 699) {
+                document.body.style.overflow = "auto";
+            }
+            document.addEventListener('contextmenu', event => event.preventDefault());
+            document.onkeydown = function(e) {
+                if(event.keyCode == 123) {
+                    return false;
+                }
+                if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+                    return false;
+                }
+                if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+                    return false;
+                }
+                if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+                    return false;
+                }
+            }
+
+            document.onselectstart = function () { return false; }
+
+            var i = 0;
+            var txt = 'click to enter....';
+            var speed = 50;
+            function typeWriter() {
+                if (i < txt.length) {
+                    document.getElementById("typingtext").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+            typeWriter();
+            
+            var cat_intensity = 100; // smaller number = more cats;
+            function Cats() {
+                var cat = this;
+                cat.x = (Math.random() * $(document).width());
+                cat.size = (Math.random() * 35) + 10;
+                cat.opacity = Math.random();
+                cat.body = $("<em class='cat'>🐈</em>");
+                cat.body.css({'font-size': this.size + 'px', 'left': this.x +'px', opacity: this.opacity });
+                cat.fall = function() {
+                    var that = this;
+                    var $cat = this.body;
+                    var swing_direction = 1;
+                    var swing_wave = Math.random() * 100;
+                    var interval = setInterval(function(){
+                    $cat.css({left: that.x + (swing_direction * swing_wave)});
+                    swing_direction = - swing_direction;
+                    }, 1000);
+                    var speed = (Math.random() * 3000) + 3000;
+                        $cat.animate({top: '100vh'}, speed, function(){
+                        clearInterval(interval);
+                        $cat.remove();
+                    });    
+                }
+                $('body').append(cat.body);
+                cat.fall();
+            }
+
+            document.body.onclick = function () {
+                $('.hero').removeClass('hidden');
+                $('#start').remove();
+                var cats = window.setInterval(function () {
+                    new Cats();
+                }, cat_intensity);
+
+                // pick a random song from the list and play it
+                songs = ["catto"]
+                var _song = songs[Math.floor(Math.random() * songs.length)];
+                var song = ".\\songs\\" + _song + ".mp3";
+                $("#radio").html("[♪] >> " + song.replace(".\\songs\\", "") + " <<");
+                var audio = document.getElementById("audio");
+                audio.src = song;
+                audio.play();
+
+                // remove document click event
+                document.body.onclick = null;
+
+                // set the background image to img.gif
+                document.body.style.backgroundImage = "url('img.gif')";
+                document.body.style.backgroundSize = "cover";
+                document.body.style.backgroundRepeat = "no-repeat";
+                document.body.style.backgroundAttachment = "fixed";
+                document.body.style.backgroundPosition = "center";
+
+                setTimeout(function () {
+                    window.clearInterval(cats);
+                }, 5000);
+                document.body.onclick = function () {
+                    // make it rain cats
+                    var cats = window.setInterval(function () {
+                        new Cats();
+                    }, cat_intensity);
+                    setTimeout(function () {
+                        window.clearInterval(cats);
+                    }, 1000);
+                }
+            }
+        </script>
+    </body>
+</html>
