@@ -1,0 +1,158 @@
+/* COPYRIGHT OF VISIONBIO 2022-2023 ---
+/* IF USING, CONTACT US BEFORE AND IF WE APPROVE,
+/* MAKE SURE TO CREDIT US. */
+
+* {
+    /*background-color:rgb(20,20,20);*/
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.wallpapersafari.com%2Ftablet%2F2560%2F1700%2F96%2F29%2FX2zDF5.jpg&f=1&nofb=1&ipt=a9823dbd7c7ac96533ffa84a66400bcb7fcd613f4faa7f02fa80453fa3f95e7e&ipo=images');
+    background-size: cover;
+    background-position: center;
+    /*overflow: hidden; removed for the sake of small screens*/
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.show-fadein {
+    animation: fadeIn ease 1.5s;
+    -webkit-animation: fadeIn ease 1.5s;
+    -moz-animation: fadeIn ease 1.5s;
+    -o-animation: fadeIn ease 1.5s;
+    -ms-animation: fadeIn ease 1.5s;
+    display: block;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.hero-content {
+    opacity: 0.9;
+    background-color: rgb(20,20,20);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hero-content-s {
+    opacity: 1;
+    background-color: rgb(20,20,20);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/*-----------------*/
+/* CUSTOM START */
+.hero-content img {
+    margin-right: 1rem;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+/* CUSTOM END */
+/*-----------------*/
+
+.desc {
+    margin-top: 0%;
+    font-size: 1rem;
+}
+
+.discord {
+    margin-top: 0%;
+    font-size: 0.8rem;
+    color: rgb(105, 104, 104);
+}
+
+.btn {
+    background: linear-gradient(90deg, #0d10b1, #361a99);
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.owner {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.co-owner {
+    background-color: #4400ff;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.mod {
+    background-color: #29859c;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    content: "Mod";
+}
+
+.admin {
+    background-color: #2ab400;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    content: "Admin";
+}
+
+.member {
+    background-color: #0099ff;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    content: "Member";
+}
+
+.secret {
+    background-color: #ff00ff;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    content: "?!";
+}
+
+
+hr {
+    color: rgb(49, 49, 49);
+}
