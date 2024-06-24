@@ -7,16 +7,16 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
-        <link rel="icon" href="assets/2ndhottestbio.png">
         <script disable-devtool-auto src='js/disable-devtool.min.js'></script>
         <title>kuda</title>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="js/snowstorm.js"></script>
     </head>
     <body>
         <video class="cover-behind-elements fullscreen" id="video" loop>
             <source src="videoplayback.mp4" type="video/mp4">
         </video>
+        <script src="js/snowstorm.js"></script>
+        <script>snowStorm.excludeMobile = false;</script>
+        <script>snowStorm.followMouse = true; snowStorm.flakeBottom = null; snowStorm.flakeLeftOffset = 0; snowStorm.flakeRightOffset = 0; snowStorm.flakeWidth = 10; snowStorm.flakeHeight = 10; snowStorm.useTwinkleEffect = true; snowStorm.snowStick = true; snowStorm.usePositionFixed = false; snowStorm.vMaxX = 2; snowStorm.vMaxY = 2;</script>
         <div class="hero hidden">
             <div class="hero-content">
                 <img src="https://cdn.discordapp.com/avatars/1074711325642604624/d8262c0d0f1222b5f42238f079a9d342.webp?size=4096" alt="pfp" class="pfp" draggable="false" width="250" height="300" /><br>
@@ -233,6 +233,7 @@
                 // remove document click event
                 document.body.onclick = null;
 
+                document.body.style.backgroundImage = "url('img.gif')";
                 document.body.style.backgroundSize = "cover";
                 document.body.style.backgroundRepeat = "no-repeat";
                 document.body.style.backgroundAttachment = "fixed";
