@@ -7,18 +7,20 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
-        <link rel="icon" href="pfp.jpeg">
         <script disable-devtool-auto src='js/disable-devtool.min.js'></script>
-        <title>emm.</title>
+        <title>kuda</title>
     </head>
     <body>
         <script src="js/snowstorm.js"></script>
         <script>snowStorm.excludeMobile = false;</script>
         <script>snowStorm.followMouse = true; snowStorm.flakeBottom = null; snowStorm.flakeLeftOffset = 0; snowStorm.flakeRightOffset = 0; snowStorm.flakeWidth = 10; snowStorm.flakeHeight = 10; snowStorm.useTwinkleEffect = true; snowStorm.snowStick = true; snowStorm.usePositionFixed = false; snowStorm.vMaxX = 2; snowStorm.vMaxY = 2;</script>
+        <video class="cover-behind-elements fullscreen" id="video" loop>
+            <source src="videoplayback.mp4" type="video/mp4">
+        </video>
         <div class="hero hidden">
             <div class="hero-content">
-                <img src="pfp.jpeg" alt="pfp" class="pfp" draggable="false" width="250" height="300" /><br>
-                <h1 style="display: inline-block; text-shadow: 0px 1px 1px ;margin-bottom:15px;font-family: 'monospace', sans-serif; color: #fff; text-align: center; background-image: url('assets/sparkle.gif');">emm/glisterk</h1>
+                <img src="https://cdn.discordapp.com/avatars/1074711325642604624/d8262c0d0f1222b5f42238f079a9d342.webp?size=4096" alt="pfp" class="pfp" draggable="false" width="250" height="300" /><br>
+                <h1 style="display: inline-block; text-shadow: 0px 1px 1px ;margin-bottom:15px;font-family: 'monospace', sans-serif; color: #fff; text-align: center; background-image: url('assets/sparkle.gif');">kuda</h1>
                 <br>
                 <!-- BADGES -->
                 <div class="badge">
@@ -35,7 +37,7 @@
                 </div>
                 <!-- END -->
                 <p class="desc">me when the when it is</p>
-                <p class="discord">glisterk#3562</p>
+                <p class="discord">care61</p>
                 <br>    
                 <div class="popup" onmouseenter="popUp('discordPopup');" onmouseleave="hidePopUp('discordPopup');"><img width="30" height="30" onclick="opendiscord();" src="./assets/socials/discord.png" draggable="false" />
                     <span class="popuptext" id="discordPopup">Discord</span>
@@ -225,23 +227,11 @@
                 $('.hero').removeClass('hidden');
                 $('#start').remove();
 
-                // pick a random song from the list and play it
-                songs = ["Buck 50", "Mask Off", "No Honorable Mention"]
-                var _song = songs[Math.floor(Math.random() * songs.length)];
-                var song = ".\\songs\\" + _song + ".mp3";
-                var audio = document.getElementById("audio");
-                audio.src = song;
+                var audio = new Audio('./audio.mp3');
                 audio.play();
 
                 // remove document click event
                 document.body.onclick = null;
-
-                // set the background image to img.gif
-                document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/f8/46/ff/f846ff732d55b7ac19d34009ab4a3606.gif')";
-                document.body.style.backgroundSize = "cover";
-                document.body.style.backgroundRepeat = "no-repeat";
-                document.body.style.backgroundAttachment = "fixed";
-                document.body.style.backgroundPosition = "center";
             }
         </script>
     </body>
