@@ -60,7 +60,7 @@ document[_0x543ef8(0x16e)](_0x543ef8(0x154), function() {
         setTimeout(_0x4874e0, _0x214250 ? 0xbbe + 0xc64 + -0x17aa : 0xa90 + -0x1 * 0x16d7 + 0xc83);
     }
     _0x4874e0();
-    const _0x40a10f = 'https://api.lanyard.rest/v1/users/869712735045304444'
+    const _0x40a10f = 'https://api.lanyard.rest/v1/users/684241141620539432'
       , _0x5026b3 = document[_0x5db68e(0x18e)]('.discord-avatar')
       , _0x38ef50 = document['querySelector']('.discord-username')
       , _0x134799 = document[_0x5db68e(0x18e)](_0x5db68e(0x16a))
