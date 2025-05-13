@@ -1,0 +1,27 @@
+.icon-image {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 100vh;
+    max-width: none;
+    max-height: 100vh;
+    display: none;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 1;
+    margin: 0;
+    border-radius: 0;
+    background: #000000;
+    box-shadow: none;
+    filter: none;
+    transition: none;
+}
+
+.icon-image.active {
+    display: block;
+}
+
+.ascii-art.hidden {
+    display: none;
+} 
