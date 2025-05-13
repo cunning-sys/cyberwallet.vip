@@ -1,0 +1,69 @@
+.ascii-art {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+    display: block;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.85;
+    font-family: monospace;
+    white-space: pre;
+    font-size: 32px;
+    line-height: 1;
+    margin: 0;
+    background: none;
+    padding-bottom: 0;
+    border: none;
+    transform: translateY(10%);
+}
+
+.ascii-purple {
+    color: #b99cff;
+    text-shadow:
+        0 0 2px #b99cff,
+        0 0 6px #7f7fff,
+        0 0 8px #ff7edb;
+}
+
+.ascii-blue {
+    color: #6ec3f4;
+    text-shadow:
+        0 0 2px #6ec3f4,
+        0 0 6px #7f7fff,
+        0 0 8px #b99cff;
+}
+
+.ascii-pink {
+    color: #ff7edb;
+    text-shadow:
+        0 0 8px #ff7edb,
+        0 0 16px #ff7edb;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.35;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.35;
+    }
+} 
